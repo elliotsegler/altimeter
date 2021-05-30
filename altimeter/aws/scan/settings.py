@@ -44,6 +44,9 @@ from altimeter.aws.resource.kms.key import KMSKeyResourceSpec
 from altimeter.aws.resource.organizations.org import OrgResourceSpec
 from altimeter.aws.resource.organizations.ou import OUResourceSpec
 from altimeter.aws.resource.organizations.account import OrgsAccountResourceSpec
+from altimeter.aws.resource.organizations.policy import (
+    AIOptOutOrgPolicyResourceSpec, BackupOrgPolicyResourceSpec, SCPOrgPolicyResourceSpec, TaggingOrgPolicyResourceSpec
+)
 from altimeter.aws.resource.rds.instance import RDSInstanceResourceSpec
 from altimeter.aws.resource.rds.snapshot import RDSSnapshotResourceSpec
 from altimeter.aws.resource.s3.bucket import S3BucketResourceSpec
@@ -102,6 +105,10 @@ ORG_RESOURCE_SPEC_CLASSES: Tuple[Type[AWSResourceSpec], ...] = (
     OrgResourceSpec,
     OrgsAccountResourceSpec,
     OUResourceSpec,
+    AIOptOutOrgPolicyResourceSpec,
+    BackupOrgPolicyResourceSpec,
+    SCPOrgPolicyResourceSpec,
+    TaggingOrgPolicyResourceSpec
 )
 
 ALL_RESOURCE_SPEC_CLASSES: Tuple[
